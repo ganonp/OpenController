@@ -1,0 +1,27 @@
+{
+  "name": "Water Pressure",
+  "serial_no": "b2389f88-2a70-4247-b382-c082c06da32e",
+  "no_channels": 3,
+  "pi_gpio_interrupt": 17,
+  "pi_pin_interrupt": 11,
+  "channels": {
+    "0": {
+      "serial_no": "7482d571-e488-4670-a4e2-b62505029724",
+      "type": "pressure",
+      "index": 0,
+      "gpio": 26
+    },
+    "1": {
+      "serial_no": "74cb603b-0daf-4c6f-917b-ea8a6b0477dc",
+      "type": "pressure",
+      "index": 1,
+      "gpio": 27
+    },
+    "2": {
+      "serial_no": "bd440972-9e42-4c94-9e70-9f57ba2870a5",
+      "type": "pressure",
+      "index": 2,
+      "gpio": 28
+    }
+  }
+}

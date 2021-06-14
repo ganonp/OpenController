@@ -1,0 +1,25 @@
+{
+  "name": "Dehumidifier Pumps",
+  "serial_no": "a8b8f514-fb2d-41b7-95ad-16abeecdee29",
+  "no_channels": 2,
+  "pi_gpio_interrupt": 3,
+  "pi_pin_interrupt": 5,
+  "channels": {
+    "0": {
+      "serial_no": "5968592d-1781-4176-b43f-04a15862a0a9",
+      "type": "pump",
+      "index": 0,
+      "en": 0,
+      "gpio0": 27,
+      "gpio1": 28
+    },
+    "1": {
+      "serial_no": "accf4598-8f75-4895-812f-40c3a069f2ad",
+      "type": "pump",
+      "index": 1,
+      "en": 1,
+      "gpio0": 20,
+      "gpio1": 21
+    }
+  }
+}

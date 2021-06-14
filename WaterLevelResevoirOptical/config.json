@@ -1,0 +1,26 @@
+{
+  "name": "Water Level Reservoir",
+  "serial_no": "ecd3b04a-7c27-4553-a9f9-4de3f31065a0",
+  "no_channels": 3,
+  "pi_pin": 1,
+  "channels": {
+    "0": {
+      "serial_no": "83d12b21-d944-45ed-98b2-a5ca40e9658a",
+      "type": "optical",
+      "index": 0,
+      "gpio": 26
+    },
+    "1": {
+      "serial_no": "365c6d0b-0949-4f9e-a8d1-f63e653e15fe",
+      "type": "optical",
+      "index": 1,
+      "gpio": 27
+    },
+    "2": {
+      "serial_no": "07a06177-d8b0-41d1-bc9c-248ea1ed3042",
+      "type": "optical",
+      "index": 2,
+      "gpio": 28
+    }
+  }
+}

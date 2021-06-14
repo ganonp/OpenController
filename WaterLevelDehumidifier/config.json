@@ -1,0 +1,27 @@
+{
+  "name": "Water Level",
+  "serial_no": "04142a53-39c8-4612-8642-f1536dd29e5c",
+  "pi_gpio_interrupt": 2,
+  "pi_pin_interrupt": 3,
+  "no_channels": 3,
+  "channels": {
+    "0": {
+      "serial_no": "17336c2e-e610-421f-a7b2-79bcc7c0779e",
+      "type": "etape",
+      "index": 0,
+      "gpio": 26
+    },
+    "1": {
+      "serial_no": "cfb01d39-8571-4532-afcd-29068ccfdc09",
+      "type": "optical",
+      "index": 1,
+      "gpio": 27
+    },
+    "2": {
+      "serial_no": "8a4f4ce1-11d1-48dc-8907-9a0f46de743e",
+      "type": "optical",
+      "index": 2,
+      "gpio": 28
+    }
+  }
+}
