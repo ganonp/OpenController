@@ -9,7 +9,7 @@ class AnalogSensor:
         self.serial_no = data["serial_no"]
         self.gpio = data["gpio"]
         self.type = data["type"]
-        self.window = 20
+        self.window = 10
         self.current_size = 0.0
         self.values = []
         self.adc = ADC(self.gpio)
