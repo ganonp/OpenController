@@ -5,11 +5,11 @@ import ujson
 class Pump:
 
     def __init__(self, data):
-        self.index = data["index"]
+        self.index = str(data["index"])
         self.serial_no = data["serial_no"]
-        self.en = Pin(data["en"], Pin.OUT)
-        self.gpio0 = Pin(data["gpio0"], Pin.OUT)
-        self.gpio1 = Pin(data["gpio1"], Pin.OUT)
+        self.en = Pin(int(data["en"]), Pin.OUT)
+        self.gpio0 = Pin(int(data["gpio0"]), Pin.OUT)
+        self.gpio1 = Pin(int(data["gpio1"]), Pin.OUT)
         self.gpio0.on()
         self.type = data["type"]
         self.pwm = PWM(self.en)
@@ -20,10 +20,11 @@ class Pump:
                               "state": "off"}
 
     def set_state(self, state):
-        if state == "on":
-            self.turn_on()
-        elif state == "off":
-            self.turn_off()
+        if self.state != state:
+            if state == "on":
+                self.turn_on()
+            elif state == "off":
+                self.turn_off()
 
         return self.response_dict
 

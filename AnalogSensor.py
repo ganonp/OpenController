@@ -5,9 +5,9 @@ import ujson
 class AnalogSensor:
 
     def __init__(self, data):
-        self.index = data["index"]
+        self.index = str(data["index"])
         self.serial_no = data["serial_no"]
-        self.gpio = data["gpio"]
+        self.gpio = int(data["gpio"])
         self.type = data["type"]
         self.window = 10
         self.current_size = 0.0
