@@ -1,19 +1,15 @@
-from machine import PWM, Pin
+from machine import Pin
 import ujson
 
 
-class Pump:
+class Relay:
 
     def __init__(self, data):
-        self.index = data["index"]
+        self.index = str(data["index"])
         self.serial_no = data["serial_no"]
-        self.en = Pin(data["en"], Pin.OUT)
-        self.gpio0 = Pin(data["gpio0"], Pin.OUT)
-        self.gpio1 = Pin(data["gpio1"], Pin.OUT)
-        self.gpio0.on()
+        self.gpio = Pin(int(data["gpio"]), Pin.OUT)
+        self.gpio.off()
         self.type = data["type"]
-        self.pwm = PWM(self.en)
-        self.pwm.freq(100)
         self.state = "off"
 
         self.response_dict = {"serial_no": str(self.serial_no), "index": str(self.index), "type": self.type,
@@ -29,12 +25,12 @@ class Pump:
         return self.response_dict
 
     def turn_on(self):
-        self.pwm.duty_u16(65025)
+        self.gpio.on()
         self.state = "on"
         self.update_response_dict("on")
 
     def turn_off(self):
-        self.pwm.duty_u16(0)
+        self.gpio.off()
         self.state = "off"
         self.update_response_dict("off")
 
