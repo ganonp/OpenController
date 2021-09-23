@@ -5,8 +5,6 @@ Connect hardware to Raspberry Pi Pico and manage it with the OpenHubAPI GUI.
 Main features:
 
 * Set up and manage hardware with a GUI
-* Pair any hardware with any iOT accessory type.  
-* Manage many iOT hubs from one location.
 
 ## Installation 
 
