@@ -1,6 +1,6 @@
 # OpenController
 
-This code works with the Raspberry Pi Pico to commun
+Connect hardware to Raspberry Pi Pico and manage it with the OpenHubAPI GUI.
 
 Main features:
 
