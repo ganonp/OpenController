@@ -1,5 +1,6 @@
 from machine import ADC, Pin
 from AnalogSensor import AnalogSensor
+from ACAnalogSensor import ACAnalogSensor
 from Pump import Pump
 import ujson
 import sys
@@ -36,6 +37,9 @@ def init():
         for v in config["channels"]:
             if v['type'] == 'sensor':
                 analog_sensor = AnalogSensor(v)
+                io_components[str(analog_sensor.index)] = analog_sensor
+            elif v['type'] == 'acsensor':
+                analog_sensor = ACAnalogSensor(v)
                 io_components[str(analog_sensor.index)] = analog_sensor
             elif v['type'] == 'pump':
                 pump = Pump(v)
@@ -83,7 +87,7 @@ def loop():
             print(e)
         finally:
             for sensor in io_components.values():
-                if sensor.type == 'sensor':
+                if sensor.type == 'sensor' or sensor.type == 'acsensor':
                     sensor.add_value()
                     sensor.update_response_dict()
             led.toggle()
