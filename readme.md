@@ -1,6 +1,7 @@
 # OpenController
 
-An easy to use microcontroller interface for Raspberry Pi Pico and OpenHub.
+An easy to use microcontroller interface for Raspberry Pi Pico and OpenHub. Works with [OpenHub](https://github.com/ganonp/OpenHub)
+and [OpenHubAPI](https://github.com/ganonp/OpenHubAPI).
 
 ## Installation 
 
